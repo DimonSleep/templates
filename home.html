@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+  <div class="container">
+
+    <!--Navbar-->
+ <CENTER>{% include "navbar1.html" %}</CENTER>
+    <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3  pt-115 pb-120">
+
+      <!-- Navbar brand -->
+      <span class="navbar-brand"></span>
+
+      <!-- Collapse button -->
+
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+
+        <!-- Links -->
+        <ul class="navbar-nav nav-item sub-menu ">
+          <li class="nav-item active">
+            <br>
+          </li>
+          <li class="nav-item">
+            <a class="" href="#">
+
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="" href="#">
+
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="" href="#">
+
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="" href="#">
+
+            </a>
+          </li>
+
+          <br>
+          <li class="nav-item">
+            <a class="" href="/">
+              <font color="#ffcc001">Likes</font>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="" href="/?page=2">
+              <font color="#ffcc01">Followers</font>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="" href="/?page=3">
+              <font color="#ffcc001">Views</font>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="" href="/?page=4">
+              <font color="#ffcc01">Comments</font>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="" href="/?page=5">
+              <font color="#ffcc01">Auto</font>
+            </a>
+          </li>
+
+        </ul>
+        <br>
+        <br>
+        <!-- Links -->
+
+
+      </div>
+      <!-- Collapsible content -->
+
+    </nav>
+
+    <!--/.Navbar-->
+    <style>
+      p.round3 {
+        border: 2px solid #ffcc01;
+        border-radius: 12px;
+        padding: 5px;
+      }
+    </style>
+    <!--Section: Products v.3-->
+    <section class="text-center mb-3">
+
+      <div class="row wow fadeIn">
+
+        {% for item in object_list %}
+        <div class="col-lg-3 col-md-6 mb-4">
+          <a href="{{ item.get_absolute_url }}">
+          <div class="card">
+
+            <div class="view overlay">
+              {% comment %} <img src="{{ item.image.url }}" class="card-img-top" {% endcomment %} <img
+                src="{{ item.image.url }}" class="card-img-top">
+              <a href="{{ item.get_absolute_url }}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <strong>
+              <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.title }}
+                <span class="badge badge-pill {{ item.get_label_display }}-color"></span>
+              </a>
+            </strong>
+            <p>
+              <a href="{{ item.get_absolute_url }}">
+            <font color="#333"> 100% Real Users<br>
+            No Password Required<br>
+            24/7 Support</font>
+          </a></p>
+          <div class="card-body text-center">
+            <a href="{{ item.get_absolute_url }}">
+              <h4 class="font-weight-bold black-text ">
+                  <p class="round3">
+                      <strong>$
+                        {% if item.discount_price %}
+                        {{ item.discount_price }}
+                        {% else %}
+                        {{ item.price }}
+                        {% endif %}
+                      </strong>
+
+                  </p>
+              </h4>
+
+            </a>
+          </div>
+          </div>
+        </a>
+        </div>
+        {% endfor %}
+      </div>
+
+    </section>
+    <!--Section: Products v.3-->
+
+    <!--Pagination-->
+
+
+
+  </div>
+</main>
+
+{% endblock content %}

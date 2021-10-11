@@ -1,0 +1,37 @@
+{% load static %}
+
+
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="/">
+    <img src="{% static 'assets/images/logo.png' %}" alt="Logo">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="toggler-icon"></span>
+    <span class="toggler-icon"></span>
+    <span class="toggler-icon"></span>
+
+  </button>
+  <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+    <ul id="nav" class="navbar-nav ml-auto">
+
+      <li class="nav-item active">
+        <a class="" href="{% url 'core:order-summary' %}">Cart<span></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="" href="{% url 'account_logout' %}">Log Out<span></span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="" href="{% url 'account_login' %}">Sign In<span></span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="" href="{% url 'account_signup' %}">Sign Up <span></span></a>
+      </li>
+
+
+
+
+    </ul>
+  </div>
+</nav>

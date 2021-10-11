@@ -1,0 +1,255 @@
+{% load static %}
+<style>
+  ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0;
+  }
+  .footer_area {
+    padding: 60px 0 20px;
+    position: relative;
+    color: #fff;
+    z-index: 100;
+    background: #222;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+
+  .single_ftr form {
+    margin-top: 8px;
+  }
+  .single_ftr p {
+    margin-bottom: 10px;
+  }
+
+  .sf_title {
+    color: #ffcc01;
+    text-transform: uppercase;
+    font-size: 17px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+  .ftr_logo {
+    float: left;
+    padding: 15px 46px 0 0;
+  }
+  .ftr_logo a img {
+    transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+  }
+  .ftr_logo a:hover img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.3;
+  }
+  .newsletter_form form {
+    position: relative;
+    display: block;
+  }
+  .newsletter_form {
+    margin-top: 0px;
+    overflow: hidden;
+  }
+  .single_ftr p {
+    display: inline-block;
+  }
+  .newsletter_form .form-control {
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    padding: 8px 20px;
+    width: 100%;
+    position: relative;
+    background: transparent;
+    color: #fff;
+    border-radius: 0;
+  }
+
+  .newsletter_form button {
+    border: inherit;
+    border-radius: 0;
+    background: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: none;
+    border: 1px solid transparent;
+    transition: 0.5s;
+    letter-spacing: 0.5px;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    padding: 12px 17px;
+    transition: 0.5s;
+  }
+  .newsletter_form button:hover,
+  .newsletter_form button:hover {
+    background: transparent;
+    color: #ffcc01;
+    opacity: 0.9;
+  }
+  .newsletter_form ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff;
+    opacity: 1;
+  }
+
+  .newsletter_form ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+    opacity: 1;
+  }
+  .newsletter_form :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+    opacity: 1;
+  }
+  .newsletter_form :-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+    opacity: 1;
+  }
+  .form-control {
+  }
+  .form-control:focus {
+    border-color: #ffcc01;
+  }
+
+  .single_ftr li {
+    padding-bottom: 7px;
+    color: #fff;
+  }
+  .single_ftr a {
+    color: #fff;
+  }
+  .single_ftr a:hover {
+    color: #ffcc01;
+  }
+
+  .ftr_social_icon li {
+    display: inline-block;
+    text-align: center;
+    padding: 4px;
+  }
+
+  .ftr_social_icon ul li a {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 17px;
+    height: 40px;
+    line-height: 32px;
+    padding: 4px 8px;
+    width: 40px;
+    transition: 0.5s;
+  }
+  .ftr_social_icon ul li a:hover {
+    background: #ffcc01;
+    border-color: #ffcc01;
+    color: #fff;
+  }
+
+  .ftr_btm_area {
+    background: transparent;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px dotted #888;
+    margin-top: 28px;
+    z-index: 100;
+    position: relative;
+  }
+  .copyright_text {
+    margin: 6px 0;
+  }
+  .payment_mthd_icon li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 30px;
+    color: #fff;
+  }
+</style>
+
+<footer class="footer_area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="single_ftr">
+          <h4 class="sf_title">Contacts</h4>
+          <ul>
+            <li>boostmyinstahelp@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <!--  End Col -->
+
+      <div class="col-md-3 col-sm-6">
+        <div class="single_ftr">
+          <h4 class="sf_title">Information</h4>
+          <ul>
+            <li><a href="#">Auto Start</a></li>
+            <li><a href="#">Guarantees</a></li>
+            <li><a href="#">Quickly and efficiently</a></li>
+            <li><a href="#">Customer Support</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--  End Col -->
+
+      <div class="col-md-3 col-sm-6">
+        <div class="single_ftr">
+          <h4 class="sf_title">Services</h4>
+          <ul>
+            <li><a href="#">Likes</a></li>
+            <li><a href="#">Followers</a></li>
+            <li><a href="#">Views</a></li>
+            <li><a href="#">Comments</a></li>
+            <li><a href="#">Auto</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--  End Col -->
+
+      <div class="col-md-3 col-sm-6">
+        <div class="single_ftr">
+          <h4 class="sf_title">Try for free</h4>
+          <div class="newsletter_form">
+            <p>
+              Buy Instagram
+              <br />
+              followers and grow
+              <br />
+              your account faster
+              <br />
+            </p>
+
+          <a href="/product/Free/" class="main-btn wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.4s">Try Now</a>
+
+          </div>
+        </div>
+      </div>
+      <!--  End Col -->
+    </div>
+  </div>
+
+  <div class="ftr_btm_area">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="ftr_social_icon"></div>
+        </div>
+        <div class="col-sm-4">
+          <p class="copyright_text text-center">
+            <a href="https://demonickstudios.com">© 2021 Demonick Studios</a>
+          </p>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="payment_mthd_icon text-right"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

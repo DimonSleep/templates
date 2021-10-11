@@ -1,0 +1,215 @@
+{% block content %} {% load static %}
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/>
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<title>{% block head_title %}BoostMyInsta{% endblock %}</title>
+{% block extra_head %} {% endblock %}
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
+<link href="{% static 'assets/css/animate.css' %}" rel="stylesheet" />
+<link href="{% static 'assets/css/slick.css' %}" rel="stylesheet" />
+<link href="{% static 'assets/css/lineicons.css' %}" rel="stylesheet" />
+<link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+<link href="{% static 'assets/css/default.css' %}" rel="stylesheet" />
+<link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
+<section class="header_area">
+  <div class="header_navbar">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="/">
+              <img src="{% static 'assets/images/logo.png' %}" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="toggler-icon"></span>
+              <span class="toggler-icon"></span>
+              <span class="toggler-icon"></span>
+
+            </button>
+            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+              <ul id="nav" class="navbar-nav ml-auto">
+
+                <li class="nav-item active">
+                  <a class="" href="{% url 'core:order-summary' %}"><font color="#ffcc01">Cart</font><span></span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="" href="{% url 'account_logout' %}"><font color="#ffcc01">Log Out</font><span></span></a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="" href="{% url 'account_login' %}"><font color="#ffcc01">Sign In</font><span></span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="" href="{% url 'account_signup' %}"><font color="#ffcc01">Sign Up </font><span></span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<main class="mt-5 pt-4">
+
+  <div class="container dark-grey-text mt-5">
+    <!--Grid row-->
+
+    <div class="row wow fadeIn">
+      <!--Grid column-->
+
+      <div class="col-md-6 mb-4">
+        <img src="{{ item.image.url }}" class="img-fluid" alt="" />
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-md-6 mb-4">
+        <!--Content-->
+        <div class="p-4">
+          <div class="mb-3">
+            <a href="">
+              <h2>
+                <span class="badge purple mr-1">
+                  {{ object.get_category_display }}
+                </span>
+              </h2>
+            </a>
+          </div>
+
+          <p class="lead">
+            {% if object.discount_price %}
+            <span class="mr-1">
+              <del>${{ object.price }}</del>
+            </span>
+            <span>${{ object.discount_price }}</span>
+            {% else %}
+            <span>${{ object.price }}</span>
+            {% endif %}
+          </p>
+
+          <p class="lead font-weight-bold">{{ item.title }}</p>
+
+          <p>{{ object.description }}</p>
+
+          {% comment %}
+          <form class="d-flex justify-content-left">
+            <!-- Default input -->
+
+            <input
+              type="number"
+              value="1"
+              aria-label="Search"
+              class="form-control"
+              style="width: 100px;"
+            >
+            <button class="btn btn-primary btn-md my-0 p" type="submit">
+              Add to cart
+              <i class="fas fa-shopping-cart ml-1"></i>
+            </button>
+          </form>
+          {% endcomment %}
+          <a
+            href="{{ object.get_add_to_cart_url }}"
+            class="btn btn-primary btn-md my-0 p"
+          >
+            Add to cart
+            <i class="fas fa-shopping-cart ml-1"></i>
+          </a>
+          <a
+            href="{{ object.get_remove_from_cart_url }}"
+            class="btn btn-danger btn-md my-0 p"
+          >
+            Remove from cart
+          </a>
+        </div>
+        <!--Content-->
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+
+    <hr />
+
+    <!--Grid row-->
+    <div class="row d-flex justify-content-center wow fadeIn">
+      <!--Grid column-->
+      <div class="col-md-6 text-center">
+        <h4 class="my-4 h4">Additional information</h4>
+
+        <p></p>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+
+    <!--Grid row-->
+    <div class="row wow fadeIn">
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-12 mb-4">
+        <a href="/">
+          <img
+            src="{% static 'assets/images/like.png' %}"
+            class="img-fluid"
+            alt=""
+          />
+        </a>
+        <center>
+          <a href="/">
+            <h4 class="my-4 h4">Likes</h4>
+          </a>
+        </center>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <a href="/?page=2">
+          <img
+            src="{% static 'assets/images/fol.png' %}"
+            class="img-fluid"
+            alt=""
+          />
+        </a>
+        <center>
+          <a href="/?page=2">
+            <h4 class="my-4 h4">Followers</h4>
+          </a>
+        </center>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <a href="/?page=3">
+          <img
+            src="{% static 'assets/images/view.png' %}"
+            class="img-fluid"
+            alt=""
+          />
+        </a>
+        <center>
+          <a href="/?page=3">
+            <h4 class="my-4 h4">Views</h4>
+          </a>
+        </center>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+</main>
+
+{% endblock content %}
+{% include "footer.html" %}
+{% include "scripts.html" %}
+
+{% block extra_scripts %}
+{% endblock extra_scripts %}

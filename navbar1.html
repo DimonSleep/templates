@@ -1,0 +1,65 @@
+<style>
+.dropbtn {
+  background-color: #FFCC01;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #black;
+}
+</style>
+
+
+
+
+<div class="dropdown ">
+  <button class=" dropbtn ">Products </button>
+  <div class="dropdown-content">
+    <a class="" href="/">
+      <font color="black">Likes</font>
+    </a>
+    <a class="" href="/?page=2">
+      <font color="black">Followers</font>
+    </a>
+    <a class="" href="/?page=3">
+      <font color="black">Views</font>
+    </a>
+    <a class="" href="/?page=4">
+      <font color="black">Comments</font>
+    </a>
+    <a class="" href="/?page=5">
+      <font color="black">Auto</font>
+    </a>
+  </div>
+</div>
